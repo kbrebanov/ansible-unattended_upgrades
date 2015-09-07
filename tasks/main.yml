@@ -1,2 +1,10 @@
 ---
 # tasks file for unattended_upgrades
+
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags: zip
+
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: zip

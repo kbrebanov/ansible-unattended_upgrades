@@ -1,0 +1,6 @@
+---
+# vars file for unattended_upgrades (Ubuntu specific)
+
+unattended_upgrades_packages:
+  - unattended-upgrades
+  - update-notifier-common
